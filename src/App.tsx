@@ -53,7 +53,7 @@ function App() {
       const ms = await peer.call(to);
       videoRef.current.srcObject = ms;
     } catch (e) {
-      console.log("Call error.");
+      console.log("Call error.", e);
     }
   }, []);
 
@@ -63,7 +63,7 @@ function App() {
       const ms = await peer.answer();
       videoRef.current.srcObject = ms;
     } catch (e) {
-      console.log("Answer error.");
+      console.log("Answer error.", e);
     }
   }, []);
 
